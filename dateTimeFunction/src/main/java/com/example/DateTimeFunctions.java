@@ -24,7 +24,6 @@ public class DateTimeFunctions {
 		//YOUR CODE STARTS HERE
 		return LocalDate.now();
 		//YOUR CODE ENDS HERE
-
 	}
 
 	/*
@@ -35,7 +34,6 @@ public class DateTimeFunctions {
 		//YOUR CODE STARTS HERE
 		return date.plusDays(x);
 		//YOUR CODE ENDS HERE
-
 	}
 
 	/*
@@ -46,7 +44,6 @@ public class DateTimeFunctions {
 		//YOUR CODE STARTS HERE
 		return date.minusWeeks(x);
 		//YOUR CODE ENDS HERE
-
 	}
 
 	/*
@@ -56,11 +53,11 @@ public class DateTimeFunctions {
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
-		Period diff = date1.until(date2);
-        return String.format("Years-%d:Months-%d:Days-%d",
-                diff.getYears(), diff.getMonths(), diff.getDays());
-		//YOUR CODE ENDS HERE
+		Period timeDiff = date1.until(date2);
 
+        return String.format("Years-%d:Months-%d:Days-%d",
+                timeDiff.getYears(), timeDiff.getMonths(), timeDiff.getDays());
+		//YOUR CODE ENDS HERE
 	}
 
 	public static void main(String[] args) {
